@@ -16,6 +16,7 @@
 package org.jetbrains.settingsRepository
 
 import com.intellij.configurationStore.*
+import com.intellij.configurationStore.schemeManager.SchemeManagerImpl
 import com.intellij.openapi.application.ApplicationManager
 import com.intellij.openapi.application.impl.ApplicationImpl
 import com.intellij.openapi.application.invokeAndWaitIfNeed

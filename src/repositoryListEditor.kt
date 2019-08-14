@@ -2,7 +2,7 @@
 package org.jetbrains.settingsRepository
 
 import com.intellij.configurationStore.ComponentStoreImpl
-import com.intellij.configurationStore.SchemeManagerFactoryBase
+import com.intellij.configurationStore.schemeManager.SchemeManagerFactoryBase
 import com.intellij.configurationStore.StateStorageManagerImpl
 import com.intellij.configurationStore.reloadAppStore
 import com.intellij.openapi.application.ApplicationManager
