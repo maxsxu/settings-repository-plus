@@ -1,7 +1,7 @@
 // Copyright 2000-2018 JetBrains s.r.o. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
 package org.jetbrains.settingsRepository
 
-import com.intellij.configurationStore.SchemeManagerFactoryBase
+import com.intellij.configurationStore.schemeManager.SchemeManagerFactoryBase
 import com.intellij.configurationStore.StreamProvider
 import com.intellij.ide.AppLifecycleListener
 import com.intellij.ide.ApplicationLoadListener
@@ -168,7 +168,10 @@ class IcsManager @JvmOverloads constructor(dir: Path, val schemeManagerFactory: 
         override val enabled: Boolean
             get() = this@IcsManager.isActive
 
-        val isDisableExportAction: Boolean
+        override val isExclusive: Boolean
+            get() = true
+
+        override val isDisableExportAction: Boolean
             get() = this@IcsManager.isRepositoryActive
 
         override fun isApplicable(fileSpec: String, roamingType: RoamingType): Boolean = isRepositoryActive

@@ -48,7 +48,7 @@ public class CommitToIcsDialog extends DialogWrapper {
 
   private void commitChanges(List<Change> changes) {
     StateStorageManager storageManager = ServiceKt.getStateStore(project).getStorageManager();
-    TrackingPathMacroSubstitutor macroSubstitutor = storageManager.getMacroSubstitutor();
+    TrackingPathMacroSubstitutor macroSubstitutor = (TrackingPathMacroSubstitutor) storageManager.getMacroSubstitutor();
     assert macroSubstitutor != null;
     IcsManager icsManager = IcsManagerKt.getIcsManager();
 

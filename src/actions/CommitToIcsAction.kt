@@ -74,7 +74,7 @@ class CommitToIcsAction : CommonCheckinFilesAction() {
   }
 
   override fun prepareRootsForCommit(roots: Array<FilePath>, project: Project): Array<FilePath> = roots
-
+/*
   override fun performCheckIn(context: VcsContext, project: Project, roots: Array<out FilePath>) {
     val projectId = getProjectId(project) ?: return
     val changes = context.selectedChanges
@@ -93,6 +93,7 @@ class CommitToIcsAction : CommonCheckinFilesAction() {
 
     showDialog(project, collectConsumer, projectId)
   }
+  */
 }
 
 private class ProjectChangeCollectConsumer(private val project: Project) {
